@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kontak Vespa</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#f3ef9a;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+    color:#2f4f1f;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    color:#2f4f1f;
+    position:relative;
+    padding-bottom:5px;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:#2f4f1f;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* BANNER KONTAK */
+.banner-kontak{
+    height:40vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("kontak vespa.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.banner-kontak h1{
+    color:white;
+    font-size:48px;
+    letter-spacing:2px;
+}
+
+/* FORM KONTAK */
+.contact-section{
+    width:60%;
+    margin:70px auto;
+    background:#ffffff;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2f4f1f;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form label{
+    font-weight:600;
+    color:#333;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.contact-form textarea{
+    resize:none;
+    height:120px;
+}
+
+/* TOMBOL */
+.contact-form button{
+    width:160px;
+    padding:12px;
+    background:#2f4f1f;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.contact-form button:hover{
+    background:#3f6b2a;
+}
+
+/* FOOTER */
+footer{
+    background:#fff3b0;
+    text-align:center;
+    padding:25px;
+    font-weight:600;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">VESPA</div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner-kontak">
+    <h1>KONTAK KAMI</h1>
+</section>
+
+<!-- FORM -->
+<section class="contact-section">
+    <h2>Hubungi Kami</h2>
+
+    <form class="contact-form">
+        <div>
+            <label>Nama Lengkap</label>
+            <input type="text" placeholder="Masukkan nama lengkap">
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="email" placeholder="Masukkan email">
+        </div>
+
+        <div>
+            <label>Subjek</label>
+            <input type="text" placeholder="Subjek pesan">
+        </div>
+
+        <div>
+            <label>Pesan</label>
+            <textarea placeholder="Tulis pesan Anda"></textarea>
+        </div>
+
+        <button type="submit">Kirim Pesan</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+     © Rasti Eva Nurhikmah_251011701053_01SIFP015
+</footer>
+
+</body>
+</html>

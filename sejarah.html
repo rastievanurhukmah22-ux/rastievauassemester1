@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Sejarah Vespa</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#f3ef9a;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+    color:#2f4f1f;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    color:#2f4f1f;
+    position:relative;
+    padding-bottom:5px;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:#2f4f1f;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* BANNER SEJARAH */
+.banner-sejarah{
+    height:70vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("joss.webp") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+}
+
+.banner-sejarah .text{
+    color:white;
+    max-width:500px;
+}
+
+.banner-sejarah h1{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.banner-sejarah p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* ISI KONTEN */
+.content{
+    width:80%;
+    margin:60px auto;
+    line-height:1.9;
+    color:#333;
+}
+
+.content h2{
+    color:#2f4f1f;
+    margin-bottom:10px;
+}
+
+.content p{
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    background:#fff3b0;
+    text-align:center;
+    padding:25px;
+    font-weight:600;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">VESPA</div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner-sejarah">
+    <div class="text">
+        <h1>SEJARAH VESPA</h1>
+        <p>
+            Perjalanan Vespa sebagai ikon otomotif dunia
+            yang lahir dari inovasi dan desain klasik Italia.
+        </p>
+    </div>
+</section>
+
+<!-- KONTEN -->
+<section class="content">
+
+    <h2>Awal Mula Vespa</h2>
+    <p>
+        Vespa pertama kali diperkenalkan pada tahun 1946 oleh perusahaan asal Italia,
+        Piaggio. Vespa dirancang sebagai kendaraan yang praktis, ekonomis, dan mudah
+        digunakan oleh masyarakat pasca Perang Dunia II.
+    </p>
+
+    <h2>Perkembangan Global</h2>
+    <p>
+        Seiring waktu, Vespa berkembang menjadi simbol gaya hidup. Desainnya yang unik
+        dan elegan membuat Vespa digemari di berbagai negara, termasuk Indonesia.
+    </p>
+
+    <h2>Vespa di Indonesia</h2>
+    <p>
+        Di Indonesia, Vespa tidak hanya digunakan sebagai alat transportasi, tetapi
+        juga menjadi bagian dari komunitas dan budaya. Banyak komunitas Vespa yang
+        aktif mengadakan kegiatan sosial dan pelestarian motor klasik.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © Rasti Eva Nurhikmah_251011701053_01SIFP015
+</footer>
+
+</body>
+</html>
