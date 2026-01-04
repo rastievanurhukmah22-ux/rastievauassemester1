@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Vespa Indonesia</title>
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#f3ef9a;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+    color:#2f4f1f;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    color:#2f4f1f;
+}
+
+/* BANNER */
+.banner{
+    height:65vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("semangat.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+}
+
+.banner .text{
+    color:white;
+    max-width:500px;
+}
+
+.banner h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+/* JAM REAL-TIME */
+.clock-section{
+    background:#f3ef9a;
+    padding:50px 0;
+    text-align:center;
+}
+
+#greeting{
+    font-size:26px;
+    font-weight:700;
+    color:#2f4f1f;
+    margin-bottom:25px;
+}
+
+.clock{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.time-box span{
+    display:block;
+    font-size:44px;
+    font-weight:800;
+    color:#2f4f1f;
+}
+
+.time-box small{
+    font-size:14px;
+    letter-spacing:1px;
+    color:#3f6b2a;
+}
+
+/* KONTEN */
+.content{
+    width:80%;
+    margin:60px auto;
+    line-height:1.9;
+    color:#333;
+}
+
+/* FOOTER */
+footer{
+    background:#fff3b0;
+    text-align:center;
+    padding:25px;
+    font-weight:600;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">VESPA</div>
+    <nav>
+        <ul>
+           <li><a href="home.html">Home</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+    <div class="text">
+        <h1>VESPA INDONESIA</h1>
+        <p>Ikon skuter legendaris dengan gaya hidup klasik.</p>
+    </div>
+</section>
+
+<!-- JAM REAL-TIME + UCAPAN -->
+<section class="clock-section">
+    <div id="greeting">Selamat Datang</div>
+
+    <div class="clock">
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+    </div>
+</section>
+
+<!-- KONTEN -->
+<section class="content">
+    <p>
+        Vespa merupakan skuter klasik asal Italia yang dikenal dengan desain unik,
+        elegan, dan menjadi simbol gaya hidup hingga saat ini.
+    </p>
+    <p>
+        <b>"Vespa bukan sekedar kendaraan, tetapi simbol kebebasan dna gaya hidup"</b>
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © Rasti Eva Nurhikmah_251011701053_01SIFP015
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function updateClock(){
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    const greeting = document.getElementById("greeting");
+    const h = now.getHours();
+
+    if(h >= 5 && h < 11){
+        greeting.innerHTML = "Selamat Pagi";
+    }else if(h >= 11 && h < 15){
+        greeting.innerHTML = "Selamat Siang";
+    }else if(h >= 15 && h < 18){
+        greeting.innerHTML = "Selamat Sore";
+    }else{
+        greeting.innerHTML = "Selamat Malam";
+    }
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
